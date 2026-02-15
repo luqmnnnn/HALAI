@@ -38,6 +38,7 @@ ecodes_data = {
     "E162": {"code": "E162", "name": "Beetroot Red", "status": "Halal", "source": "Plant", "description": "Red color."},
     "E163": {"code": "E163", "name": "Anthocyanins", "status": "Halal", "source": "Plant", "description": "Red/Blue/Purple color."},
     "E170": {"code": "E170", "name": "Calcium Carbonate", "status": "Halal", "source": "Mineral", "description": "White color/calcium source."},
+    "E170I": {"code": "E170i", "name": "Calcium Carbonate", "status": "Halal", "source": "Mineral", "description": "White color/calcium source."},
     "E171": {"code": "E171", "name": "Titanium Dioxide", "status": "Halal", "source": "Mineral", "description": "White color."},
     "E172": {"code": "E172", "name": "Iron Oxides", "status": "Halal", "source": "Mineral", "description": "Red/Yellow/Black colors."},
 
@@ -68,6 +69,7 @@ ecodes_data = {
     "E331": {"code": "E331", "name": "Sodium Citrates", "status": "Halal", "source": "Mineral/Fermentation", "description": "Acidity regulator."},
     "E339": {"code": "E339", "name": "Sodium Phosphates", "status": "Halal", "source": "Mineral", "description": "Stabilizer."},
     "E341": {"code": "E341", "name": "Calcium Phosphates", "status": "Halal", "source": "Mineral", "description": "Raising agent."},
+    "E341III": {"code": "E341iii", "name": "Tricalcium Phosphate", "status": "Halal", "source": "Mineral", "description": "Anti-caking agent."},
 
     # --- THICKENERS, STABILIZERS & EMULSIFIERS (E400-E499) ---
     "E400": {"code": "E400", "name": "Alginic Acid", "status": "Halal", "source": "Seaweed", "description": "Thickener."},
@@ -79,6 +81,7 @@ ecodes_data = {
     "E414": {"code": "E414", "name": "Gum Arabic", "status": "Halal", "source": "Plant", "description": "Stabilizer."},
     "E415": {"code": "E415", "name": "Xanthan Gum", "status": "Halal", "source": "Fermentation", "description": "Thickener."},
     "E420": {"code": "E420", "name": "Sorbitol", "status": "Halal", "source": "Plant", "description": "Sweetener/Humectant."},
+    "E421": {"code": "E421", "name": "Mannitol", "status": "Halal", "source": "Plant", "description": "Sweetener."},
     "E422": {"code": "E422", "name": "Glycerol", "status": "Syubhah", "source": "Plant/Animal Fat", "description": "Check for Halal logo. Often plant-based but can be animal."},
     "E440": {"code": "E440", "name": "Pectins", "status": "Halal", "source": "Plant (Fruit)", "description": "Gelling agent."},
     "E441": {"code": "E441", "name": "Gelatin", "status": "Syubhah", "source": "Animal (Bone/Skin)", "description": "Could be Pig (Haram) or Cow (Halal). Requires Halal logo."},
@@ -126,6 +129,7 @@ ecodes_data = {
     "E954": {"code": "E954", "name": "Saccharin", "status": "Halal", "source": "Synthetic", "description": "Sweetener."},
     "E955": {"code": "E955", "name": "Sucralose", "status": "Halal", "source": "Synthetic", "description": "Sweetener."},
     "E965": {"code": "E965", "name": "Maltitol", "status": "Halal", "source": "Plant", "description": "Sweetener."},
+    "E967": {"code": "E967", "name": "Xylitol", "status": "Halal", "source": "Plant", "description": "Sweetener."},
 
     # --- ADDITIONAL ---
     "E1105": {"code": "E1105", "name": "Lysozyme", "status": "Syubhah", "source": "Chicken Egg", "description": "Enzyme from eggs. Halal if egg source is Halal."},
@@ -142,10 +146,25 @@ ecodes_data = {
     "LARD": {"code": "Fat", "name": "Lard", "status": "Haram", "source": "Pig Fat", "description": "Pig fat. STRICTLY PROHIBITED."},
     "PORK": {"code": "Meat", "name": "Pork", "status": "Haram", "source": "Pig Meat", "description": "Pig meat. STRICTLY PROHIBITED."},
     "ALCOHOL": {"code": "Alc", "name": "Alcohol / Ethanol", "status": "Syubhah", "source": "Fermentation", "description": "If used as ingredient/intoxicant: Haram. If trace/processing aid: Syubhah."},
+    "COCOAPOWDER": {"code": "Plant", "name": "Cocoa Powder", "status": "Halal", "source": "Plant", "description": "From cocoa beans."},
+    "VANILLIN": {"code": "Flavor", "name": "Vanillin", "status": "Halal", "source": "Synthetic/Plant", "description": "Vanilla flavor."},
+    "INULIN": {"code": "Fiber", "name": "Inulin", "status": "Halal", "source": "Plant (Chicory)", "description": "Prebiotic fiber."},
+    "WHEYPROTEINCONCENTRATE": {"code": "Milk", "name": "Whey Protein Concentrate", "status": "Syubhah", "source": "Milk", "description": "Check for Halal logo (Rennet source)."},
     "WHEY": {"code": "Milk", "name": "Whey", "status": "Syubhah", "source": "Milk/Cheese making", "description": "Rennet used in cheese making might be animal based."},
     "RENNET": {"code": "Enzyme", "name": "Rennet", "status": "Syubhah", "source": "Animal Stomach", "description": "Enzyme for cheese. Animal source requires Halal slaughter."},
     "PEPSIN": {"code": "Enzyme", "name": "Pepsin", "status": "Syubhah", "source": "Animal Stomach", "description": "Enzyme. Often pig derived (Haram) or cow (Halal if slaughtered)."},
-    "PHENYLALANINE": {"code": "Amino Acid", "name": "Phenylalanine", "status": "Halal", "source": "Synthetic/Natural", "description": "Common amino acid. Safe for most (Warning for PKU patients)."}
+    "PHENYLALANINE": {"code": "Amino Acid", "name": "Phenylalanine", "status": "Halal", "source": "Synthetic/Natural", "description": "Common amino acid. Safe for most (Warning for PKU patients)."},
+
+    # --- SPORTS NUTRITION & SUPPLEMENTS ---
+    "LLEUCINE": {"code": "Amino Acid", "name": "L-Leucine", "status": "Halal", "source": "Fermentation", "description": "BCAA. Usually fermentation derived."},
+    "LISOLEUCINE": {"code": "Amino Acid", "name": "L-Isoleucine", "status": "Halal", "source": "Fermentation", "description": "BCAA. Usually fermentation derived."},
+    "LVALINE": {"code": "Amino Acid", "name": "L-Valine", "status": "Halal", "source": "Fermentation", "description": "BCAA. Usually fermentation derived."},
+    "CREATINE": {"code": "Supplement", "name": "Creatine", "status": "Halal", "source": "Synthetic", "description": "Performance supplement."},
+    "TAURINE": {"code": "Supplement", "name": "Taurine", "status": "Halal", "source": "Synthetic", "description": "Amino acid."},
+    "GLUTAMINE": {"code": "Amino Acid", "name": "Glutamine", "status": "Halal", "source": "Fermentation", "description": "Amino acid."},
+    "MALTODEXTRIN": {"code": "Carb", "name": "Maltodextrin", "status": "Halal", "source": "Plant", "description": "Carbohydrate source."},
+    "DEXTROSE": {"code": "Sugar", "name": "Dextrose", "status": "Halal", "source": "Plant", "description": "Simple sugar."},
+    "E960": {"code": "E960", "name": "Steviol Glycosides (Stevia)", "status": "Halal", "source": "Plant", "description": "Natural sweetener."}
 }
 
 # 3. Upload to Firestore

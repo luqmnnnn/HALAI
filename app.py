@@ -170,10 +170,16 @@ def check_database(ingredients):
 # Custom CSS for Professional Look
 st.markdown("""
     <style>
-    .stMetric {
+    [data-testid="stMetric"] {
         background-color: #f0f2f6;
-        padding: 10px;
+        padding: 15px;
         border-radius: 10px;
+        border: 1px solid #d6d6d6;
+    }
+    /* Force text color to dark to ensure visibility on light background */
+    [data-testid="stMetric"] [data-testid="stMetricLabel"],
+    [data-testid="stMetric"] [data-testid="stMetricValue"] {
+        color: #31333F !important;
     }
     </style>
     """, unsafe_allow_html=True)

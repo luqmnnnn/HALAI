@@ -71,9 +71,10 @@ def analyze_image(image):
     Analyze this food label image.
     1. Identify ALL food additives, E-numbers (e.g., E120), INS numbers (e.g., INS 471), and suspicious ingredients (e.g., Gelatin, Lard, Emulsifiers).
     2. If an ingredient is listed by name (e.g., "Citric Acid"), try to provide its E-number in the 'code' field (e.g., "E330").
-    3. Look for context keywords like "Vegetable", "Plant-based", "Soy", "Synthetic", or "Animal".
+    3. Use context keywords (like "Vegetable", "Soy", "Animal") ONLY to fill the 'context' field. DO NOT list them as separate ingredients.
     4. Return the result strictly as a JSON list of objects with keys: "code" (the E-number, INS number, or name) and "context" (the surrounding text indicating source).
-    5. Do not add markdown like ```json. Just the raw JSON.
+    5. Do not list the same ingredient twice.
+    6. Do not add markdown like ```json. Just the raw JSON.
     
     Example Output: [{"code": "E471", "context": "Vegetable origin"}, {"code": "Gelatin", "context": ""}]
     """
@@ -104,15 +105,26 @@ def check_database(ingredients):
     """
     results_list = []
     overall_status = "Halal" # Optimistic default
+    seen_codes = set() # Track seen codes to prevent duplicates
+    
+    # Keywords to ignore if the AI mistakenly lists them as ingredients
+    ignore_keywords = {"VEGETABLE", "PLANT", "PLANTBASED", "SOY", "SYNTHETIC", "ANIMAL", "MINERAL", "FLAVOR", "COLOUR", "PRESERVATIVE", "INGREDIENTS", "CONTAINS"}
     
     for item_obj in ingredients:
         # Handle input (expecting dict from new prompt)
-        code_str = item_obj.get("code", "")
-        context = item_obj.get("context", "")
+        code_str = item_obj.get("code", "").strip()
+        context = item_obj.get("context", "").strip()
+
+        if not code_str:
+            continue
 
         # Clean the text (e.g., "E-120" -> "E120", "INS 471" -> "E471")
         code_key = code_str.upper().replace("-", "").replace(" ", "").replace(".", "").replace("(", "").replace(")", "")
         
+        # Filter out generic keywords acting as codes
+        if code_key in ignore_keywords:
+            continue
+
         # Handle INS codes (common in Asia)
         if "INS" in code_key:
             code_key = code_key.replace("INS", "E")
@@ -121,6 +133,11 @@ def check_database(ingredients):
         if code_key.isdigit():
             code_key = f"E{code_key}"
         
+        # Deduplication check
+        if code_key in seen_codes:
+            continue
+        seen_codes.add(code_key)
+
         # Check Firebase
         doc_ref = db.collection('ecodes').document(code_key)
         doc = doc_ref.get()

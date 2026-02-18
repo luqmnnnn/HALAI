@@ -6,7 +6,7 @@
   <b>Halal Artificial Intelligence Scanner</b>
 </div>
 
-**HALAI™** is an intelligent food scanner that instantly detects Haram and Syubhah ingredients using Google Gemini and Firebase. Built for **KitaHack 2026**.
+**HALAI™** is an intelligent food scanner that instantly detects Haram and Syubhah ingredients using Google Gemini and Firebase. Built for **KitaHack 2026** by Team **4-midable**.
 
 This project directly addresses **UN Sustainable Development Goal 3: Good Health and Well-being** by empowering consumers to make informed dietary choices that align with their health, cultural, and religious needs.
 

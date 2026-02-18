@@ -195,7 +195,7 @@ with st.sidebar:
     st.warning("🟠 **Syubhah**: Doubtful")
     st.success("🟢 **Halal**: Safe")
     st.divider()
-    st.caption("🚀 Built for KitaHack 2026")
+    st.caption("🚀 Built for KitaHack 2026 by Team 4-midable")
 
 # Main Layout
 st.title("HALAI™")

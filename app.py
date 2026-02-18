@@ -36,7 +36,14 @@ if not firebase_admin._apps:
             # Create a dictionary from secrets and fix newlines in the private key
             firebase_conf = dict(st.secrets["firebase"])
             if "private_key" in firebase_conf:
-                firebase_conf["private_key"] = firebase_conf["private_key"].replace("\\n", "\n").strip('"').strip("'").strip()
+                pkey = firebase_conf["private_key"].replace("\\n", "\n").strip('"').strip("'").strip()
+                
+                # Safety Check: Private keys never contain '@'
+                if "@" in pkey:
+                    st.error(f"🚨 CONFIG ERROR: Your 'private_key' in Secrets contains an '@' symbol. You likely pasted the 'client_email' here by mistake.\n\nPlease go to Streamlit Settings -> Secrets and fix the [firebase] section.")
+                    st.stop()
+                
+                firebase_conf["private_key"] = pkey
             
             cred = credentials.Certificate(firebase_conf)
             firebase_admin.initialize_app(cred)

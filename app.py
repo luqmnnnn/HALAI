@@ -14,14 +14,38 @@ load_dotenv() # Load your .env file
 st.set_page_config(page_title="HALAI™", page_icon="☪️", layout="wide")
 
 # Setup Gemini AI (The Brain)
-genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+try:
+    # Try getting key from Streamlit Secrets (Cloud)
+    gemini_key = st.secrets.get("GEMINI_API_KEY")
+except FileNotFoundError:
+    gemini_key = None
+
+# Fallback to .env (Local)
+if not gemini_key:
+    gemini_key = os.getenv("GEMINI_API_KEY")
+
+genai.configure(api_key=gemini_key)
 model = genai.GenerativeModel('gemini-2.5-flash-lite')
 
 # Setup Firebase (The Validator)
 # We check if it's already initialized to prevent errors when Streamlit refreshes
 if not firebase_admin._apps:
-    cred = credentials.Certificate("firebase_key.json")
-    firebase_admin.initialize_app(cred)
+    # 1. Try Streamlit Secrets (Best for Cloud)
+    try:
+        if "firebase" in st.secrets:
+            cred = credentials.Certificate(dict(st.secrets["firebase"]))
+            firebase_admin.initialize_app(cred)
+    except FileNotFoundError:
+        pass # Running locally without secrets.toml
+
+    # 2. Try Local File (Best for Local)
+    if not firebase_admin._apps and os.path.exists("firebase_key.json"):
+        cred = credentials.Certificate("firebase_key.json")
+        firebase_admin.initialize_app(cred)
+    
+    # 3. Final Check
+    if not firebase_admin._apps:
+        st.error("🔥 Firebase credentials not found. Please set up secrets or add firebase_key.json.")
 db = firestore.client()
 
 # --- 2. CORE FUNCTIONS ---

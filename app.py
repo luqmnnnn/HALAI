@@ -33,7 +33,12 @@ if not firebase_admin._apps:
     # 1. Try Streamlit Secrets (Best for Cloud)
     try:
         if "firebase" in st.secrets:
-            cred = credentials.Certificate(dict(st.secrets["firebase"]))
+            # Create a dictionary from secrets and fix newlines in the private key
+            firebase_conf = dict(st.secrets["firebase"])
+            if "private_key" in firebase_conf:
+                firebase_conf["private_key"] = firebase_conf["private_key"].replace("\\n", "\n")
+            
+            cred = credentials.Certificate(firebase_conf)
             firebase_admin.initialize_app(cred)
     except FileNotFoundError:
         pass # Running locally without secrets.toml

@@ -8,6 +8,8 @@
 
 **HALAI™** is an intelligent food scanner that instantly detects Haram and Syubhah ingredients using Google Gemini and Firebase. Built for **KitaHack 2026**.
 
+This project directly addresses **UN Sustainable Development Goal 3: Good Health and Well-being** by empowering consumers to make informed dietary choices that align with their health, cultural, and religious needs.
+
 ## 🏗️ System Architecture
 
 The app follows a streamlined flow to ensure accurate results:
@@ -26,6 +28,13 @@ The app follows a streamlined flow to ensure accurate results:
 *   **Smart Detection**: Understands context (e.g., "Vegetable E471" is Halal).
 *   **Safety Score**: Instant visual rating of the product.
 *   **Community Driven**: Users can report missing ingredients.
+
+## 🔄 User Feedback & Iteration
+
+We actively tested HALAI™ with real users to refine the experience:
+1.  **Feedback:** "Text is too small." $\rightarrow$ **Fix:** Increased font size and contrast.
+2.  **Feedback:** "What is Syubhah?" $\rightarrow$ **Fix:** Added clear definitions in the sidebar.
+3.  **Feedback:** "App crashes on bad internet." $\rightarrow$ **Fix:** Added offline error handling.
 
 ## 💻 How to Run
 

@@ -136,10 +136,13 @@ ecodes_data = {
     "E950": {"code": "E950", "name": "Acesulfame K", "status": "Halal", "source": "Synthetic", "description": "Sweetener."},
     "E951": {"code": "E951", "name": "Aspartame", "status": "Halal", "source": "Synthetic", "description": "Sweetener."},
     "E952": {"code": "E952", "name": "Cyclamate", "status": "Halal", "source": "Synthetic", "description": "Sweetener."},
+    "E953": {"code": "E953", "name": "Isomalt", "status": "Halal", "source": "Plant (Beet)", "description": "Sugar substitute."},
     "E954": {"code": "E954", "name": "Saccharin", "status": "Halal", "source": "Synthetic", "description": "Sweetener."},
     "E955": {"code": "E955", "name": "Sucralose", "status": "Halal", "source": "Synthetic", "description": "Sweetener."},
     "E965": {"code": "E965", "name": "Maltitol", "status": "Halal", "source": "Plant", "description": "Sweetener."},
+    "E966": {"code": "E966", "name": "Lactitol", "status": "Halal", "source": "Milk", "description": "Sweetener derived from lactose."},
     "E967": {"code": "E967", "name": "Xylitol", "status": "Halal", "source": "Plant", "description": "Sweetener."},
+    "E968": {"code": "E968", "name": "Erythritol", "status": "Halal", "source": "Fermentation", "description": "Natural sweetener."},
 
     # --- ADDITIONAL ---
     "E1105": {"code": "E1105", "name": "Lysozyme", "status": "Syubhah", "source": "Chicken Egg", "description": "Enzyme from eggs. Halal if egg source is Halal."},
@@ -148,6 +151,7 @@ ecodes_data = {
     "E1414": {"code": "E1414", "name": "Acetylated Distarch Phosphate", "status": "Halal", "source": "Plant", "description": "Modified starch."},
     "E1422": {"code": "E1422", "name": "Acetylated Distarch Adipate", "status": "Halal", "source": "Plant", "description": "Modified starch."},
     "E1442": {"code": "E1442", "name": "Hydroxypropyl Distarch Phosphate", "status": "Halal", "source": "Plant", "description": "Modified starch."},
+    "E1520": {"code": "E1520", "name": "Propylene Glycol", "status": "Halal", "source": "Synthetic", "description": "Humectant/Solvent."},
 
     # --- MISSING E-CODES & COMMON ADDITIVES ---
     "E234": {"code": "E234", "name": "Nisin", "status": "Halal", "source": "Fermentation", "description": "Antibacterial peptide."},

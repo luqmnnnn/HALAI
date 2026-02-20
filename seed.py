@@ -152,6 +152,7 @@ ecodes_data = {
     "E1422": {"code": "E1422", "name": "Acetylated Distarch Adipate", "status": "Halal", "source": "Plant", "description": "Modified starch."},
     "E1442": {"code": "E1442", "name": "Hydroxypropyl Distarch Phosphate", "status": "Halal", "source": "Plant", "description": "Modified starch."},
     "E1520": {"code": "E1520", "name": "Propylene Glycol", "status": "Halal", "source": "Synthetic", "description": "Humectant/Solvent."},
+    "E1520": {"code": "E1520", "name": "Propylene Glycol", "status": "Halal", "source": "Synthetic", "description": "Humectant/Solvent."},
 
     # --- MISSING E-CODES & COMMON ADDITIVES ---
     "E234": {"code": "E234", "name": "Nisin", "status": "Halal", "source": "Fermentation", "description": "Antibacterial peptide."},

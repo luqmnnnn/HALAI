@@ -275,12 +275,12 @@ with col2:
         
         # Verdict Card
         if status == "Haram":
-            st.error(f"🚨 **HARAM DETECTED**\n\nContains prohibited ingredients.")
+            st.error(f"🚨 **HARAM DETECTED**\n\nThis product contains prohibited ingredients. **It is not permissible to consume.**")
         elif status == "Syubhah":
-            st.warning(f"⚠️ **SYUBHAH (Doubtful)**\n\nContains ingredients that require verification.")
+            st.warning(f"⚠️ **SYUBHAH (Doubtful)**\n\nContains ingredients that could be from animal sources. **Please verify with a Halal logo before consuming.**")
             st.info("👉 **Recommendation:** Look for a Halal Logo (JAKIM) on the packaging to confirm safety.")
         else:
-            st.success(f"✅ **LIKELY HALAL**\n\nNo flagged ingredients found.")
+            st.success(f"✅ **LIKELY HALAL**\n\nNo flagged ingredients found. **This product appears safe to consume.**")
             
         # Share Button
         share_text = f"☪️ *HALAI™ Scan Result*\n\nStatus: *{status}*\nSafety Score: {score}%\n\nCheck your food with HALAI!"

@@ -295,22 +295,22 @@ html, body, [class*="css"] { font-family: 'DM Sans', sans-serif; }
 [data-testid="stSidebarCollapseButton"] button,
 [data-testid="stSidebarCollapsedControl"] button {
     background: #FAF7F2 !important;
-    border: 1px solid #5C4A2A !important;
+    border: 1px solid #2C1F0A !important;
     border-radius: 8px !important;
-    color: #5C4A2A !important;
+    color: #2C1F0A !important;
     box-shadow: 0 2px 6px rgba(139,105,20,0.1) !important;
     padding: 0.4rem !important;
 }
 [data-testid="stSidebarCollapseButton"] button svg,
 [data-testid="stSidebarCollapsedControl"] button svg {
-    fill: #5C4A2A !important;
-    stroke: #5C4A2A !important;
+    fill: #2C1F0A !important;
+    stroke: #2C1F0A !important;
 }
 [data-testid="stSidebarCollapseButton"] button:hover,
 [data-testid="stSidebarCollapsedControl"] button:hover {
     background: #E8CC7A !important;
     color: #2C1F0A !important;
-    border-color: #5C4A2A !important;
+    border-color: #2C1F0A !important;
 }
 
 /* ── Hero ── */

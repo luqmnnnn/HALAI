@@ -1,7 +1,7 @@
 # ☪️ HALAI™
 
 <div align="center">
-  <img src="https://via.placeholder.com/150?text=HALAI" alt="HALAI Logo" width="150"/>
+  <img src="logohalai.jpg" alt="HALAI Logo" width="150"/>
   <br>
   <b>Halal Artificial Intelligence Scanner</b>
 </div>

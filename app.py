@@ -289,11 +289,11 @@ header[data-testid="stHeader"] { background: transparent !important; }
 .hero-logo-fallback { width: 72px; height: 72px; border-radius: 14px; background: linear-gradient(135deg, #2C1F0A, #5C3A10); display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 0 4px 24px rgba(139,105,20,0.18); }
 .badge { display: inline-flex; align-items: center; gap: 5px; background: rgba(139,105,20,0.1); border: 1px solid rgba(184,146,42,0.35); color: #8B6914; font-size: 0.62rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; padding: 2px 9px; border-radius: 20px; margin-bottom: 0.4rem; }
 .hero-title { font-family: 'Cormorant Garamond', serif; font-size: 2.6rem; font-weight: 700; letter-spacing: 0.06em; line-height: 1; background: linear-gradient(135deg, #8B6914 0%, #D4AA55 45%, #B8922A 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin: 0 0 0.15rem 0; }
-.hero-sub { font-size: 0.65rem; color: #8B7355; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; }
-.hero-desc { color: #5C4A2A; font-size: 0.85rem; margin-top: 0.5rem; font-weight: 300; line-height: 1.6; max-width: 480px; }
+.hero-sub { font-size: 1.4rem; color: #8B6914; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; }
+.hero-desc { color: #5C4A2A; font-size: 1.25rem; margin-top: 0.8rem; font-weight: 500; line-height: 1.4; max-width: 650px; }
 
 /* ── Section label ── */
-.section-label { font-size: 0.64rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.16em; color: #B8922A; margin-bottom: 0.9rem; display: flex; align-items: center; gap: 8px; }
+.section-label { font-size: 1.4rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #8B6914; margin-bottom: 1.0rem; display: flex; align-items: center; gap: 10px; }
 .section-label::before { content: ''; display: inline-block; width: 18px; height: 1.5px; background: linear-gradient(90deg, #B8922A, #E8CC7A); border-radius: 2px; }
 
 /* ── File uploader ── */
@@ -332,8 +332,8 @@ header[data-testid="stHeader"] { background: transparent !important; }
 .verdict-haram { background: #FFF5F5; border: 1px solid rgba(200,80,80,0.25); border-left: 4px solid #C94040; border-radius: 10px; padding: 1rem 1.2rem; color: #7A2020; }
 .verdict-syubhah { background: #FFFBF0; border: 1px solid rgba(184,146,42,0.3); border-left: 4px solid #B8922A; border-radius: 10px; padding: 1rem 1.2rem; color: #5C3A00; }
 .verdict-halal { background: #F5FFF8; border: 1px solid rgba(50,160,90,0.25); border-left: 4px solid #2D8A50; border-radius: 10px; padding: 1rem 1.2rem; color: #1A4D2E; }
-.verdict-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.3rem; display: flex; align-items: center; gap: 8px; }
-.verdict-body { font-size: 0.82rem; opacity: 0.88; line-height: 1.65; }
+.verdict-title { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 700; margin-bottom: 0.3rem; display: flex; align-items: center; gap: 8px; }
+.verdict-body { font-size: 1.1rem; opacity: 0.95; line-height: 1.5; }
 
 /* ── Ingredient cards ──
    NOTE: Each card section (header, context, desc) is rendered as a
@@ -354,19 +354,19 @@ header[data-testid="stHeader"] { background: transparent !important; }
 .ing-card-wrap.bl-unknown { border-left: 3px solid #9E8C72; }
 
 .ing-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 4px; }
-.ing-code { font-family: 'IBM Plex Mono', monospace; font-size: 0.76rem; font-weight: 500; color: #B8922A; background: rgba(184,146,42,0.09); padding: 1px 6px; border-radius: 4px; }
-.ing-name { font-size: 0.86rem; font-weight: 600; color: #2C1F0A; margin-left: 0.4rem; }
-.ing-status { display: inline-flex; align-items: center; gap: 4px; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
+.ing-code { font-family: 'IBM Plex Mono', monospace; font-size: 0.9rem; font-weight: 600; color: #B8922A; background: rgba(184,146,42,0.09); padding: 2px 8px; border-radius: 4px; }
+.ing-name { font-size: 1.1rem; font-weight: 700; color: #2C1F0A; margin-left: 0.5rem; }
+.ing-status { display: inline-flex; align-items: center; gap: 5px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
 .ing-status.haram   { color: #C94040; }
 .ing-status.syubhah { color: #B8922A; }
 .ing-status.halal   { color: #2D8A50; }
 .ing-status.unknown { color: #9E8C72; }
-.ing-ctx  { font-size: 0.71rem; color: #A89070; font-style: italic; margin-top: 0.2rem; display: flex; align-items: center; gap: 4px; }
-.ing-desc { font-size: 0.74rem; color: #8B7355; margin-top: 0.25rem; line-height: 1.5; }
+.ing-ctx  { font-size: 0.9rem; color: #A89070; font-style: italic; margin-top: 0.3rem; display: flex; align-items: center; gap: 5px; }
+.ing-desc { font-size: 1.0rem; color: #5C4A2A; margin-top: 0.3rem; line-height: 1.4; font-weight: 500; }
 
 /* ── Placeholder ── */
-.placeholder-box { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 180px; text-align: center; gap: 0.6rem; background: rgba(255,252,245,0.5); border: 1px dashed rgba(184,146,42,0.22); border-radius: 12px; padding: 2rem; }
-.placeholder-text { font-size: 0.8rem; color: #A89070; font-weight: 300; line-height: 1.6; }
+.placeholder-box { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 220px; text-align: center; gap: 0.8rem; background: rgba(255,252,245,0.5); border: 2px dashed rgba(184,146,42,0.4); border-radius: 12px; padding: 2rem; }
+.placeholder-text { font-size: 1.25rem; color: #8B6914; font-weight: 600; line-height: 1.4; }
 
 /* ── Misc ── */
 hr { border-color: rgba(184,146,42,0.15) !important; }
@@ -484,10 +484,15 @@ st.markdown(f"""
 col1, col2 = st.columns([1, 1], gap="large")
 
 with col1:
-    st.markdown(f'<div class="section-label">{icon("upload-cloud",13,"#B8922A")} &nbsp;Step 1 — Upload Label</div>', unsafe_allow_html=True)
+    st.markdown(f'<div class="section-label">{icon("upload-cloud",24,"#8B6914")} &nbsp;Step 1 — Upload Label</div>', unsafe_allow_html=True)
     uploaded_file = st.file_uploader("Upload Label Image", type=["jpg", "png", "jpeg"], label_visibility="collapsed")
 
     if uploaded_file is not None:
+        # Reset results if a new file is uploaded
+        if "last_file_name" not in st.session_state or st.session_state.last_file_name != uploaded_file.name:
+            st.session_state.last_file_name = uploaded_file.name
+            st.session_state.results = None
+
         image = Image.open(uploaded_file)
         st.image(image, caption="Uploaded Label", use_container_width=True)
 
@@ -509,15 +514,18 @@ with col1:
                     st.session_state.results = {"status": status, "details": details}
                     st.toast("Scan complete!")
     else:
+        # Clear results if file is removed
+        st.session_state.results = None
+        
         st.markdown(f"""
         <div class="placeholder-box">
-            <div>{icon("upload-cloud", 38, "#C8A84B")}</div>
+            <div>{icon("upload-cloud", 48, "#8B6914")}</div>
             <div class="placeholder-text">Drop a photo of your food label here<br>JPG, PNG or JPEG accepted</div>
         </div>
         """, unsafe_allow_html=True)
 
 with col2:
-    st.markdown(f'<div class="section-label">{icon("bar-chart",13,"#B8922A")} &nbsp;Step 2 — Analysis Result</div>', unsafe_allow_html=True)
+    st.markdown(f'<div class="section-label">{icon("bar-chart",24,"#8B6914")} &nbsp;Step 2 — Analysis Result</div>', unsafe_allow_html=True)
 
     if "results" in st.session_state and st.session_state.results and uploaded_file:
         results = st.session_state.results
@@ -582,19 +590,15 @@ with col2:
             t_ctx  = safe_text(item["context"])
 
             # ── Card header (code + name + status) ──
+            # Construct HTML without indentation to prevent Markdown code-block rendering issues
+            ctx_html = f'<div class="ing-ctx">{icon("info",11,"#A89070")} {t_ctx}</div>' if t_ctx else ''
+            
             st.markdown(f"""
-            <div class="ing-card-wrap bl-{bl}">
-                <div class="ing-header">
-                    <span>
-                        <span class="ing-code">{t_code}</span>
-                        <span class="ing-name">{t_name}</span>
-                    </span>
-                    <span class="ing-status {bl}">{svg} {s}</span>
-                </div>
-                {f'<div class="ing-ctx">{icon("info",11,"#A89070")} {t_ctx}</div>' if t_ctx else ''}
-                <div class="ing-desc">{t_desc}</div>
-            </div>
-            """, unsafe_allow_html=True)
+<div class="ing-card-wrap bl-{bl}">
+<div class="ing-header"><span><span class="ing-code">{t_code}</span><span class="ing-name">{t_name}</span></span><span class="ing-status {bl}">{svg} {s}</span></div>
+{ctx_html}
+<div class="ing-desc">{t_desc}</div>
+</div>""", unsafe_allow_html=True)
 
         st.markdown("<br>", unsafe_allow_html=True)
         with st.expander("Report Incorrect Info"):
@@ -612,7 +616,7 @@ with col2:
     else:
         st.markdown(f"""
         <div class="placeholder-box">
-            <div>{icon("bar-chart", 38, "#C8A84B")}</div>
+            <div>{icon("bar-chart", 48, "#8B6914")}</div>
             <div class="placeholder-text">Your analysis results will appear here<br>after you upload and scan a label</div>
         </div>
         """, unsafe_allow_html=True)

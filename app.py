@@ -222,6 +222,7 @@ html, body, [class*="css"] { font-family: 'DM Sans', sans-serif; }
     background: #FAF7F2 !important; 
     border-radius: 8px !important;
     box-shadow: 0 2px 5px rgba(139,105,20,0.1) !important;
+    padding: 0.4rem !important;
 }
 
 /* Ensure SVGs are visible */
@@ -290,6 +291,7 @@ html, body, [class*="css"] { font-family: 'DM Sans', sans-serif; }
     border-radius: 8px !important;
     color: #5C4A2A !important;
     box-shadow: 0 2px 6px rgba(139,105,20,0.1) !important;
+    padding: 0.4rem !important;
 }
 [data-testid="stSidebarCollapseButton"] button svg,
 [data-testid="stSidebarCollapsedControl"] button svg {

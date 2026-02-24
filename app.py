@@ -218,7 +218,7 @@ html, body, [class*="css"] { font-family: 'DM Sans', sans-serif; }
 /* Target buttons in toolbar and header actions */
 [data-testid="stToolbar"] button, [data-testid="stHeaderActionElements"] button {
     color: #5C4A2A !important; 
-    border: 1px solid #B8922A !important;
+    border: 1px solid #5C4A2A !important;
     background: #FAF7F2 !important; 
     border-radius: 8px !important;
     box-shadow: 0 2px 5px rgba(139,105,20,0.1) !important;
@@ -230,7 +230,7 @@ html, body, [class*="css"] { font-family: 'DM Sans', sans-serif; }
 }
 
 [data-testid="stToolbar"] button:hover, [data-testid="stHeaderActionElements"] button:hover {
-    border-color: #8B6914 !important;
+    border-color: #5C4A2A !important;
     background: #E8CC7A !important;
     color: #2C1F0A !important;
 }
@@ -286,7 +286,7 @@ html, body, [class*="css"] { font-family: 'DM Sans', sans-serif; }
 [data-testid="stSidebarCollapseButton"] button,
 [data-testid="stSidebarCollapsedControl"] button {
     background: #FAF7F2 !important;
-    border: 1px solid #B8922A !important;
+    border: 1px solid #5C4A2A !important;
     border-radius: 8px !important;
     color: #5C4A2A !important;
     box-shadow: 0 2px 6px rgba(139,105,20,0.1) !important;
@@ -300,7 +300,7 @@ html, body, [class*="css"] { font-family: 'DM Sans', sans-serif; }
 [data-testid="stSidebarCollapsedControl"] button:hover {
     background: #E8CC7A !important;
     color: #2C1F0A !important;
-    border-color: #8B6914 !important;
+    border-color: #5C4A2A !important;
 }
 
 /* ── Hero ── */

@@ -254,19 +254,19 @@ html, body, [class*="css"] { font-family: 'DM Sans', sans-serif; }
 [data-testid="stSidebar"] .stMarkdown p { color: #C8B48A !important; }
 [data-testid="stSidebar"] hr { border-color: rgba(184,146,42,0.25) !important; }
 [data-testid="stSidebar"] .stMarkdown h3 {
-    color: #D4AA55 !important; font-size: 0.72rem !important;
+    color: #D4AA55 !important; font-size: 0.85rem !important;
     text-transform: uppercase; letter-spacing: 0.15em; font-weight: 600;
 }
 
 /* ── Sidebar logo ── */
 .sidebar-logo { display: flex; align-items: center; gap: 10px; padding: 0.25rem 0 0.5rem 0; }
 .sidebar-logo img { width: 46px; height: 46px; border-radius: 10px; object-fit: cover; border: 1px solid rgba(184,146,42,0.3); }
-.sidebar-brand { font-family: 'Cormorant Garamond', serif !important; font-size: 1.4rem !important; font-weight: 700 !important; color: #E8CC7A !important; letter-spacing: 0.06em; line-height: 1; }
-.sidebar-tagline { font-size: 0.62rem !important; color: #8B7355 !important; text-transform: uppercase; letter-spacing: 0.14em; margin-top: 2px; }
-.sidebar-nav-item { display: flex; align-items: flex-start; gap: 10px; padding: 0.5rem 0; color: #C8B48A; font-size: 0.83rem; line-height: 1.5; }
+.sidebar-brand { font-family: 'Cormorant Garamond', serif !important; font-size: 1.6rem !important; font-weight: 700 !important; color: #E8CC7A !important; letter-spacing: 0.06em; line-height: 1; }
+.sidebar-tagline { font-size: 0.75rem !important; color: #8B7355 !important; text-transform: uppercase; letter-spacing: 0.14em; margin-top: 2px; }
+.sidebar-nav-item { display: flex; align-items: flex-start; gap: 10px; padding: 0.5rem 0; color: #C8B48A; font-size: 0.95rem; line-height: 1.5; }
 .sidebar-nav-item svg { margin-top: 2px; flex-shrink: 0; }
 .sidebar-nav-num { font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; font-weight: 700; color: #D4AA55; line-height: 1; min-width: 16px; }
-.risk-row { display: flex; align-items: center; gap: 10px; padding: 0.45rem 0.6rem; border-radius: 7px; margin-bottom: 4px; font-size: 0.8rem; font-weight: 500; }
+.risk-row { display: flex; align-items: center; gap: 10px; padding: 0.45rem 0.6rem; border-radius: 7px; margin-bottom: 4px; font-size: 0.9rem; font-weight: 500; }
 .risk-row.haram   { background: rgba(180,40,40,0.18);  color: #F5A0A0; }
 .risk-row.syubhah { background: rgba(184,146,42,0.18); color: #E8CC7A; }
 .risk-row.halal   { background: rgba(45,138,80,0.18);  color: #86EFAC; }
@@ -456,20 +456,20 @@ with st.sidebar:
 
     st.divider()
     st.markdown(f"""
-    <div style="color:#D4AA55;font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:0.6rem;display:flex;align-items:center;gap:6px;">
+    <div style="color:#D4AA55;font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:0.6rem;display:flex;align-items:center;gap:6px;">
         {icon("smartphone", 13, "#D4AA55")} How to Use
     </div>
     <div class="sidebar-nav-item">{icon("upload-cloud",14,"#B8922A")}<span><span class="sidebar-nav-num">1</span>&nbsp; <strong>Upload</strong> a photo of the ingredients label</span></div>
     <div class="sidebar-nav-item">{icon("scan",14,"#B8922A")}<span><span class="sidebar-nav-num">2</span>&nbsp; <strong>Scan</strong> to detect E-codes &amp; additives</span></div>
     <div class="sidebar-nav-item">{icon("bar-chart",14,"#B8922A")}<span><span class="sidebar-nav-num">3</span>&nbsp; <strong>Review</strong> your safety report</span></div>
-    <div style="background:rgba(184,146,42,0.1);border:1px solid rgba(184,146,42,0.25);border-radius:8px;padding:0.6rem 0.8rem;margin:0.8rem 0;display:flex;align-items:flex-start;gap:8px;color:#C8B48A;font-size:0.79rem;line-height:1.5;">
+    <div style="background:rgba(184,146,42,0.1);border:1px solid rgba(184,146,42,0.25);border-radius:8px;padding:0.6rem 0.8rem;margin:0.8rem 0;display:flex;align-items:flex-start;gap:8px;color:#C8B48A;font-size:0.85rem;line-height:1.5;">
         {icon("info",14,"#D4AA55")} <span>Ensure the text in your photo is clear and in focus.</span>
     </div>
     """, unsafe_allow_html=True)
 
     st.divider()
     st.markdown(f"""
-    <div style="color:#D4AA55;font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:0.6rem;display:flex;align-items:center;gap:6px;">
+    <div style="color:#D4AA55;font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:0.6rem;display:flex;align-items:center;gap:6px;">
         {icon("shield", 13, "#D4AA55")} Risk Levels
     </div>
     <div class="risk-row haram">{icon("x-circle",14,"#F5A0A0")} <strong>Haram</strong> — Prohibited</div>
@@ -479,7 +479,7 @@ with st.sidebar:
 
     st.divider()
     st.markdown(f"""
-    <div style="display:flex;align-items:center;gap:6px;color:#6B5A3E;font-size:0.7rem;">
+    <div style="display:flex;align-items:center;gap:6px;color:#6B5A3E;font-size:0.8rem;">
         {icon("zap",11,"#6B5A3E")} Built for KitaHack 2026 · Team 4-midable
     </div>""", unsafe_allow_html=True)
 

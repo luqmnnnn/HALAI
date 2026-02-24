@@ -1,4 +1,4 @@
-# ☪️ HALAI™
+# HALAI
 
 <div align="center">
   <img src="logohalai.jpg" alt="HALAI Logo" width="150"/>

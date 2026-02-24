@@ -259,6 +259,23 @@ header[data-testid="stHeader"] { background: transparent !important; }
 @media (max-width: 768px) {
     .mobile-sidebar-hint { display: flex !important; }
 }
+/* ── Sidebar collapse/expand button ── */
+[data-testid="stSidebarCollapseButton"] button,
+[data-testid="stSidebarCollapsedControl"] button {
+    background: rgba(184,146,42,0.15) !important;
+    border: 1px solid rgba(184,146,42,0.35) !important;
+    border-radius: 8px !important;
+    color: #8B6914 !important;
+}
+[data-testid="stSidebarCollapseButton"] button svg,
+[data-testid="stSidebarCollapsedControl"] button svg {
+    fill: #8B6914 !important;
+    stroke: #8B6914 !important;
+}
+[data-testid="stSidebarCollapseButton"] button:hover,
+[data-testid="stSidebarCollapsedControl"] button:hover {
+    background: rgba(184,146,42,0.28) !important;
+}
 
 /* ── Hero ── */
 .hero-section {
@@ -268,7 +285,7 @@ header[data-testid="stHeader"] { background: transparent !important; }
     margin-bottom: 1.5rem;
     flex-wrap: wrap;
 }
-.hero-logo img { width: 72px; height: 72px; border-radius: 14px; object-fit: cover; box-shadow: 0 4px 24px rgba(139,105,20,0.18); border: 1px solid rgba(184,146,42,0.25); }
+.hero-logo img { width: 72px; height: 72px; border-radius: 14px; object-fit: contain; box-shadow: 0 4px 24px rgba(139,105,20,0.18); border: 1px solid rgba(184,146,42,0.25); }
 .hero-logo-fallback { width: 72px; height: 72px; border-radius: 14px; background: linear-gradient(135deg, #2C1F0A, #5C3A10); display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 0 4px 24px rgba(139,105,20,0.18); }
 .badge { display: inline-flex; align-items: center; gap: 5px; background: rgba(139,105,20,0.1); border: 1px solid rgba(184,146,42,0.35); color: #8B6914; font-size: 0.62rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; padding: 2px 9px; border-radius: 20px; margin-bottom: 0.4rem; }
 .hero-title { font-family: 'Cormorant Garamond', serif; font-size: 2.6rem; font-weight: 700; letter-spacing: 0.06em; line-height: 1; background: linear-gradient(135deg, #8B6914 0%, #D4AA55 45%, #B8922A 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin: 0 0 0.15rem 0; }

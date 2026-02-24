@@ -16,6 +16,7 @@
 - Key Features
 - System Architecture
 - Tech Stack
+- Project Structure
 - Installation & Setup
 - Usage Guide
 - Future Roadmap
@@ -85,6 +86,29 @@ graph LR
 | **Database** | Firebase Firestore | NoSQL database for ingredient data. |
 | **Backend Logic** | Python 3.10+ | Data processing and API integration. |
 | **Image Processing** | Pillow (PIL) | Image manipulation before sending to AI. |
+
+## 📂 Project Structure
+
+Here is an overview of the project's file organization:
+
+```text
+HALAI/
+├── app.py                 # Main application file (Streamlit frontend + Logic)
+├── seed.py                # Script to populate Firestore with initial E-code data
+├── requirements.txt       # List of Python dependencies
+├── .env                   # Environment variables (API Keys - Not uploaded to Git)
+├── firebase_key.json      # Firebase Service Account Key (Not uploaded to Git)
+├── logohalai.jpg          # Project logo image
+├── README.md              # Project documentation
+└── License                # MIT License file
+```
+
+### File Descriptions
+*   **`app.py`**: The heart of the application. It contains the Streamlit UI code, the integration with Google Gemini for image analysis, and the logic to query Firebase Firestore.
+*   **`seed.py`**: A utility script run once to upload the comprehensive list of E-codes (Halal, Haram, Syubhah) to the database.
+*   **`requirements.txt`**: Ensures all developers and the deployment server have the necessary libraries installed.
+*   **`.env`**: Stores sensitive keys like `GEMINI_API_KEY` securely.
+*   **`firebase_key.json`**: Authentication file required for the app to talk to the Google Firebase database.
 
 ## 💻 Installation & Setup
 

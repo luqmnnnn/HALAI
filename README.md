@@ -174,7 +174,7 @@ streamlit run app.py
 ## 👥 Team
 
 **Team 4-midable**
-*   **Luqman** - Lead Developer & AI Engineer
+*   **Luqman** - Team Leader
 *   **Iman** - Team Member
 *   **Sofea** - Team Member
 *   **Afiq** - Team Member

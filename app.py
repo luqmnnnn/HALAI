@@ -213,12 +213,27 @@ html, body, [class*="css"] { font-family: 'DM Sans', sans-serif; }
 
 /* ── Header / Toolbar (Star, Menu, etc.) ── */
 [data-testid="stHeader"] { background: transparent !important; }
-[data-testid="stToolbar"] { right: 1rem; top: 0.5rem; }
-[data-testid="stToolbar"] button {
-    color: #5C4A2A !important; border: 1px solid rgba(184,146,42,0.25) !important;
-    background: rgba(255,252,245,0.7) !important; border-radius: 8px !important;
+[data-testid="stToolbar"], [data-testid="stHeaderActionElements"] { right: 1rem; top: 0.5rem; }
+
+/* Target buttons in toolbar and header actions */
+[data-testid="stToolbar"] button, [data-testid="stHeaderActionElements"] button {
+    color: #5C4A2A !important; 
+    border: 1px solid #B8922A !important;
+    background: #FAF7F2 !important; 
+    border-radius: 8px !important;
+    box-shadow: 0 2px 5px rgba(139,105,20,0.1) !important;
 }
-[data-testid="stToolbar"] button:hover { border-color: #B8922A !important; background: #FAF7F2 !important; color: #2C1F0A !important; }
+
+/* Ensure SVGs are visible */
+[data-testid="stToolbar"] button svg, [data-testid="stHeaderActionElements"] button svg {
+    stroke: #5C4A2A !important;
+}
+
+[data-testid="stToolbar"] button:hover, [data-testid="stHeaderActionElements"] button:hover {
+    border-color: #8B6914 !important;
+    background: #E8CC7A !important;
+    color: #2C1F0A !important;
+}
 
 /* ── Sidebar ── */
 [data-testid="stSidebar"] {

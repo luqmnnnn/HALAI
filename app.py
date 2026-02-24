@@ -213,7 +213,11 @@ html, body, [class*="css"] { font-family: 'DM Sans', sans-serif; }
 
 /* ── Header / Toolbar (Star, Menu, etc.) ── */
 [data-testid="stHeader"] { background: transparent !important; }
-[data-testid="stToolbar"], [data-testid="stHeaderActionElements"] { right: 1rem; top: 0.5rem; }
+[data-testid="stToolbar"], [data-testid="stHeaderActionElements"] { 
+    right: 1rem; top: 0.5rem; 
+    opacity: 1 !important; 
+    visibility: visible !important;
+}
 
 /* Target buttons in toolbar and header actions */
 [data-testid="stToolbar"] button, [data-testid="stHeaderActionElements"] button {
@@ -284,6 +288,10 @@ html, body, [class*="css"] { font-family: 'DM Sans', sans-serif; }
     .mobile-sidebar-hint { display: flex !important; }
 }
 /* ── Sidebar collapse/expand button ── */
+[data-testid="stSidebarCollapsedControl"] {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
 [data-testid="stSidebarCollapseButton"] button,
 [data-testid="stSidebarCollapsedControl"] button {
     background: #FAF7F2 !important;

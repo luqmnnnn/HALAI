@@ -210,7 +210,15 @@ html, body, [class*="css"] { font-family: 'DM Sans', sans-serif; }
         radial-gradient(ellipse 50% 35% at 85% 90%, rgba(139,105,20,0.07) 0%, transparent 50%);
 }
 [data-testid="stDecoration"] { display: none !important; }
-header[data-testid="stHeader"] { background: transparent !important; }
+
+/* ── Header / Toolbar (Star, Menu, etc.) ── */
+[data-testid="stHeader"] { background: transparent !important; }
+[data-testid="stToolbar"] { right: 1rem; top: 0.5rem; }
+[data-testid="stToolbar"] button {
+    color: #5C4A2A !important; border: 1px solid rgba(184,146,42,0.25) !important;
+    background: rgba(255,252,245,0.7) !important; border-radius: 8px !important;
+}
+[data-testid="stToolbar"] button:hover { border-color: #B8922A !important; background: #FAF7F2 !important; color: #2C1F0A !important; }
 
 /* ── Sidebar ── */
 [data-testid="stSidebar"] {
@@ -262,19 +270,22 @@ header[data-testid="stHeader"] { background: transparent !important; }
 /* ── Sidebar collapse/expand button ── */
 [data-testid="stSidebarCollapseButton"] button,
 [data-testid="stSidebarCollapsedControl"] button {
-    background: rgba(184,146,42,0.15) !important;
-    border: 1px solid rgba(184,146,42,0.35) !important;
+    background: #FAF7F2 !important;
+    border: 1px solid #B8922A !important;
     border-radius: 8px !important;
-    color: #8B6914 !important;
+    color: #5C4A2A !important;
+    box-shadow: 0 2px 6px rgba(139,105,20,0.1) !important;
 }
 [data-testid="stSidebarCollapseButton"] button svg,
 [data-testid="stSidebarCollapsedControl"] button svg {
-    fill: #8B6914 !important;
-    stroke: #8B6914 !important;
+    fill: #5C4A2A !important;
+    stroke: #5C4A2A !important;
 }
 [data-testid="stSidebarCollapseButton"] button:hover,
 [data-testid="stSidebarCollapsedControl"] button:hover {
-    background: rgba(184,146,42,0.28) !important;
+    background: #E8CC7A !important;
+    color: #2C1F0A !important;
+    border-color: #8B6914 !important;
 }
 
 /* ── Hero ── */
@@ -320,8 +331,8 @@ header[data-testid="stHeader"] { background: transparent !important; }
 }
 .stButton > button:not([kind="primary"]):hover,
 [data-testid="stFormSubmitButton"] > button:hover { border-color: rgba(184,146,42,0.6) !important; background: #FAF7F2 !important; color: #2C1F0A !important; }
-[data-testid="stLinkButton"] a { background: rgba(139,105,20,0.08) !important; color: #8B6914 !important; border: 1px solid rgba(184,146,42,0.35) !important; border-radius: 8px !important; font-family: 'DM Sans', sans-serif !important; font-weight: 600 !important; transition: all 0.2s ease !important; }
-[data-testid="stLinkButton"] a:hover { background: rgba(139,105,20,0.15) !important; }
+[data-testid="stLinkButton"] a { background: #FAF7F2 !important; color: #5C4A2A !important; border: 1px solid #B8922A !important; border-radius: 8px !important; font-family: 'DM Sans', sans-serif !important; font-weight: 700 !important; transition: all 0.2s ease !important; box-shadow: 0 2px 5px rgba(139,105,20,0.1) !important; }
+[data-testid="stLinkButton"] a:hover { background: #E8CC7A !important; color: #2C1F0A !important; border-color: #8B6914 !important; }
 
 /* ── Metrics ── */
 [data-testid="stMetric"] { background: rgba(255,252,245,0.85) !important; border: 1px solid rgba(184,146,42,0.2) !important; border-radius: 12px !important; padding: 1rem 1.25rem !important; box-shadow: 0 1px 8px rgba(139,105,20,0.06) !important; }

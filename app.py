@@ -336,7 +336,8 @@ html, body, [class*="css"] { font-family: 'DM Sans', sans-serif; }
 [data-testid="stFileUploader"] { background: rgba(245,240,232,0.5) !important; border: 2px dashed rgba(184,146,42,0.35) !important; border-radius: 12px !important; }
 [data-testid="stFileUploader"]:hover { border-color: rgba(184,146,42,0.6) !important; }
 [data-testid="stFileUploader"] small,
-[data-testid="stFileUploader"] span { color: #8B7355 !important; }
+[data-testid="stFileUploader"] span,
+[data-testid="stFileUploader"] div { color: #8B6914 !important; }
 [data-testid="stFileUploader"] button { color: #8B6914 !important; border-color: #8B6914 !important; background: #FAF7F2 !important; }
 
 /* ── Buttons ── */

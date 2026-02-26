@@ -526,9 +526,9 @@ with col1:
 
     if input_mode == "Webcam":
         st.caption("Note: This widget uses your browser's default camera (often the front one).")
-        uploaded_file = st.camera_input("Take a photo", label_visibility="collapsed")
+        uploaded_file = st.camera_input("Take a photo", label_visibility="collapsed", key="camera_input")
     else:
-        uploaded_file = st.file_uploader("Upload Label Image", type=["jpg", "png", "jpeg"], label_visibility="collapsed")
+        uploaded_file = st.file_uploader("Upload Label Image", type=["jpg", "png", "jpeg", "webp"], label_visibility="collapsed", key="file_uploader")
 
     if uploaded_file is not None:
         # Reset results if a new file is uploaded
@@ -537,8 +537,12 @@ with col1:
             st.session_state.last_file_id = file_id
             st.session_state.results = None
 
-        image = Image.open(uploaded_file)
-        st.image(image, caption="Uploaded Label", use_container_width=True)
+        try:
+            image = Image.open(uploaded_file)
+            st.image(image, caption="Uploaded Label", use_container_width=True)
+        except Exception:
+            st.error("Error loading image. Please try again.")
+            st.stop()
 
         if st.button("Scan Ingredients", type="primary", use_container_width=True):
             with st.spinner("AI is reading the label..."):

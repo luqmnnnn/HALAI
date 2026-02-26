@@ -522,9 +522,10 @@ col1, col2 = st.columns([1, 1], gap="large")
 with col1:
     st.markdown(f'<div class="section-label">{icon("upload-cloud",24,"#8B6914")} &nbsp;Step 1 — Upload Label</div>', unsafe_allow_html=True)
     
-    input_mode = st.radio("Input Mode", ["Upload File", "Use Camera"], horizontal=True, label_visibility="collapsed")
+    input_mode = st.radio("Input Mode", ["Mobile Camera / Upload", "Webcam"], horizontal=True, label_visibility="collapsed")
 
-    if input_mode == "Use Camera":
+    if input_mode == "Webcam":
+        st.caption("Note: This widget uses your browser's default camera (often the front one).")
         uploaded_file = st.camera_input("Take a photo", label_visibility="collapsed")
     else:
         uploaded_file = st.file_uploader("Upload Label Image", type=["jpg", "png", "jpeg"], label_visibility="collapsed")
@@ -563,7 +564,7 @@ with col1:
         st.markdown(f"""
         <div class="placeholder-box">
             <div>{icon("upload-cloud", 48, "#8B6914")}</div>
-            <div class="placeholder-text">Upload a photo or use the camera<br>to scan your food label</div>
+            <div class="placeholder-text">Tap 'Mobile Camera' to scan<br>with your back camera</div>
         </div>
         """, unsafe_allow_html=True)
 

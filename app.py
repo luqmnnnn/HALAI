@@ -521,12 +521,19 @@ col1, col2 = st.columns([1, 1], gap="large")
 
 with col1:
     st.markdown(f'<div class="section-label">{icon("upload-cloud",24,"#8B6914")} &nbsp;Step 1 — Upload Label</div>', unsafe_allow_html=True)
-    uploaded_file = st.file_uploader("Upload Label Image", type=["jpg", "png", "jpeg"], label_visibility="collapsed")
+    
+    input_mode = st.radio("Input Mode", ["Upload File", "Use Camera"], horizontal=True, label_visibility="collapsed")
+
+    if input_mode == "Use Camera":
+        uploaded_file = st.camera_input("Take a photo", label_visibility="collapsed")
+    else:
+        uploaded_file = st.file_uploader("Upload Label Image", type=["jpg", "png", "jpeg"], label_visibility="collapsed")
 
     if uploaded_file is not None:
         # Reset results if a new file is uploaded
-        if "last_file_name" not in st.session_state or st.session_state.last_file_name != uploaded_file.name:
-            st.session_state.last_file_name = uploaded_file.name
+        file_id = f"{uploaded_file.name}-{uploaded_file.size}"
+        if "last_file_id" not in st.session_state or st.session_state.last_file_id != file_id:
+            st.session_state.last_file_id = file_id
             st.session_state.results = None
 
         image = Image.open(uploaded_file)
@@ -556,7 +563,7 @@ with col1:
         st.markdown(f"""
         <div class="placeholder-box">
             <div>{icon("upload-cloud", 48, "#8B6914")}</div>
-            <div class="placeholder-text">Drop a photo of your food label here<br>JPG, PNG or JPEG accepted</div>
+            <div class="placeholder-text">Upload a photo or use the camera<br>to scan your food label</div>
         </div>
         """, unsafe_allow_html=True)
 

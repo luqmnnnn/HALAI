@@ -156,7 +156,7 @@ streamlit run app.py
 ## 📖 Usage Guide
 
 1.  **Launch the App**: Open the local URL provided by Streamlit (usually `http://localhost:8501`).
-2.  **Upload Label**: Click "Browse files" or drag & drop an image of a food ingredient label.
+2.  **Upload Label**: Click "Browse files" (or select "Take Photo" on mobile) to scan a food ingredient label.
 3.  **Scan**: Click the "Scan Ingredients" button.
 4.  **Review**:
     *   Check the **Safety Score**.

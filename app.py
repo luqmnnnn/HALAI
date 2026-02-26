@@ -337,7 +337,7 @@ html, body, [class*="css"] { font-family: 'DM Sans', sans-serif; }
 [data-testid="stFileUploader"]:hover { border-color: rgba(184,146,42,0.6) !important; }
 [data-testid="stFileUploader"] small,
 [data-testid="stFileUploader"] span { color: #8B7355 !important; }
-[data-testid="stFileUploader"] button { color: #5C4A2A !important; }
+[data-testid="stFileUploader"] button { color: #8B6914 !important; border-color: #8B6914 !important; background: #FAF7F2 !important; }
 
 /* ── Buttons ── */
 .stButton > button[kind="primary"] {
@@ -522,13 +522,7 @@ col1, col2 = st.columns([1, 1], gap="large")
 with col1:
     st.markdown(f'<div class="section-label">{icon("upload-cloud",24,"#8B6914")} &nbsp;Step 1 — Upload Label</div>', unsafe_allow_html=True)
     
-    input_mode = st.radio("Input Mode", ["Mobile Camera / Upload", "Webcam"], horizontal=True, label_visibility="collapsed")
-
-    if input_mode == "Webcam":
-        st.caption("Note: This widget uses your browser's default camera (often the front one).")
-        uploaded_file = st.camera_input("Take a photo", label_visibility="collapsed", key="camera_input")
-    else:
-        uploaded_file = st.file_uploader("Upload Label Image", type=["jpg", "png", "jpeg", "webp"], label_visibility="collapsed", key="file_uploader")
+    uploaded_file = st.file_uploader("Upload Label Image", type=["jpg", "png", "jpeg", "webp"], label_visibility="collapsed", key="file_uploader")
 
     if uploaded_file is not None:
         # Reset results if a new file is uploaded
@@ -568,7 +562,7 @@ with col1:
         st.markdown(f"""
         <div class="placeholder-box">
             <div>{icon("upload-cloud", 48, "#8B6914")}</div>
-            <div class="placeholder-text">Tap 'Mobile Camera' to scan<br>with your back camera</div>
+            <div class="placeholder-text">Upload a photo or take a picture<br>to scan your food label</div>
         </div>
         """, unsafe_allow_html=True)
 

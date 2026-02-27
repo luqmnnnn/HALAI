@@ -28,7 +28,7 @@
 
 **HALAI™** is an advanced AI-powered food scanner designed to be the "Digital Halal Auditor" in your pocket. Built for the modern Muslim consumer, HALAI helps instantly identify **Haram** (prohibited) and **Syubhah** (doubtful) ingredients in food products, especially when an official Halal certification logo is missing.
 
-By leveraging **Google Gemini's Multimodal AI** for sophisticated context-aware OCR and a verified **Firebase** database of E-codes, HALAI provides an immediate safety verdict. This empowers users to navigate global food markets with confidence, ensuring their consumption aligns with religious requirements and health values (supporting **UN SDGs 3 & 12**).
+By leveraging **Google Gemini's Multimodal AI** for sophisticated context-aware OCR and a verified **Firebase** database of E-codes, HALAI provides an immediate safety verdict. This empowers users to navigate global food markets with confidence, ensuring their consumption aligns with religious requirements and health values (supporting **UN SDG 12**).
 
 ## 🚩 The Problem: The "Missing Halal Logo" Dilemma
 

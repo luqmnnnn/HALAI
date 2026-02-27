@@ -30,7 +30,7 @@
 
 By leveraging **Google Gemini's Multimodal AI** for sophisticated context-aware OCR and a verified **Firebase** database of E-codes, HALAI provides an immediate safety verdict. This empowers users to navigate global food markets with confidence, ensuring their consumption aligns with religious requirements and health values (supporting **UN SDGs 3 & 12**).
 
-## 🚩 The Problem: The "Missing Logo" Dilemma
+## 🚩 The Problem: The "Missingn Halal Logo" Dilemma
 
 The primary challenge for Muslim consumers isn't just identifying bad ingredients—it's the uncertainty found in everyday shopping scenarios:
 

@@ -19,6 +19,7 @@
 - Project Structure
 - Installation & Setup
 - Usage Guide
+- Challenges Faced
 - Future Roadmap
 - Team
 
@@ -163,6 +164,15 @@ streamlit run app.py
     *   Read the **Verdict** (Halal, Syubhah, or Haram).
     *   Expand the **Detailed Breakdown** to see specific ingredients.
 5.  **Share**: Use the "Share Result" button to send findings via WhatsApp.
+
+## 🧗 Challenges Faced
+
+Building HALAI came with its own set of unique hurdles:
+
+*   **OCR on Curved Surfaces:** Food packaging is rarely flat. We had to fine-tune our prompts to help Gemini correctly interpret text wrapped around bottles or crinkled bags.
+*   **The "Context" Puzzle:** Distinguishing between *E471 (Plant)* and *E471 (Animal)* required more than just a database lookup. We had to engineer the AI to look for surrounding keywords like "Vegetable origin" or "Soy-based" to prevent false alarms.
+*   **Latency vs. Accuracy:** Balancing the depth of AI analysis with the need for a sub-5-second response time for mobile users.
+*   **Data Verification:** Aggregating a trustworthy database of E-codes required cross-referencing multiple Islamic bodies (JAKIM, MUI, etc.) to ensure our "Truth List" was accurate.
 
 ## 🗺️ Future Roadmap
 
